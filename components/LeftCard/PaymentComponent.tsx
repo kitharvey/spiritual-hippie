@@ -2,23 +2,24 @@ import Image from 'next/image';
 import React from 'react'
 
 interface PaymentComponentProps {
+    setIsComplete: (i: boolean) => void
 
 }
 
-const PaymentComponent: React.FC<PaymentComponentProps> = ({}) => {
+const PaymentComponent: React.FC<PaymentComponentProps> = ({ setIsComplete}) => {
         return (
-            <div>
+            <div className='payment-wrapper' >
                 <div>
-                    <p>Shipping method</p>
+                    <p className='title'>Shipping method</p>
                     <input type="text" placeholder='Secured Shipping' />
                 </div>
                 <div>
-                    <p>Billing address</p>
+                    <p  className='title' >Billing address</p>
                     <input type="text" placeholder='Same as shipping address' />
                     <input type="text" placeholder='Use a different billing address' />
                 </div>
                 <div>
-                    <p>Payment</p>
+                    <p  className='title'>Payment</p>
                     <small>All transactions are secured and encrypted</small>
                    <div>
                        <div>
@@ -45,7 +46,7 @@ const PaymentComponent: React.FC<PaymentComponentProps> = ({}) => {
                        </div>
                    </div>
                 </div>
-                <button>Complete order</button>
+                <button className='submit-button' onClick={() => setIsComplete(true)} >Complete order</button>
 
             </div>
         );
