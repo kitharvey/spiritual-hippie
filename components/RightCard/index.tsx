@@ -46,7 +46,7 @@ const productData = [
     key: generateKey("Copy of Free Mystery Gift"),
   },
   {
-    img: "/assets/SafeGuard2.png",
+    img: "/assets/SafeGuard.png",
     name: "Safeguard - Shipping Guarantee",
     description: "Safeguard shipping guarantee",
     details: [".98"],
