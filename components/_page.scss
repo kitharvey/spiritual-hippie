@@ -1,0 +1,23 @@
+.main-page{
+    display: flex;
+    min-height: 95vh;
+
+    .left-card, .right-card{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-card{
+        box-shadow: 5px 0px 5px 0px #00000015;
+        padding-right: 40px;
+    }
+    .right-card{
+        padding-left: 40px;
+
+        .product{
+            display: flex;
+        }
+    }
+}

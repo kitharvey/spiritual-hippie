@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import '../components/page';
+$white: #ffffff;
+$black: #333333;
+$accent-color: #fac5e8;
+
+/* Font/text values */
+$font-fam: 'Roboto', sans-serif;
+$font-style-normal: normal;
+$font-weight-normal: normal;
+$font-size-16: 16px;
+$character-spacing-0: 0px;
+$line-spacing-20: 20px;
+$text-transform-uppercase: uppercase;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $font-fam;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+  @media screen and (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 57px;
+  width: 100%;
+  background: transparent url('/assets/Footer BG.svg') 0% 0% no-repeat padding-box;
+  color: #717171;
+  .brand{
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-align: left;
+  }
+
+  .footer-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 14px;
+    a{
+      text-align: left;
+      font-size: .8125rem;
+      letter-spacing: 0.04px;
+      font-size: 11px;
+      padding-left: 14px;
+      margin-left: 14px;
+      border-left: 1px solid #BDBDBD;
+
+      &:first-child{
+        border-left: none;
+      }
+    }
+  }
+}
