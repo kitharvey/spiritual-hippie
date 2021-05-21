@@ -1,32 +1,79 @@
-import React from 'react'
-import Advert from './Advert'
-import Coupon from './Coupon'
-import Product from './Product'
-import SubTotal from './SubTotal'
+import React, { useState } from "react"
+import generateKey from "../../helper/keyGen"
+import Advert from "./Advert"
+import Coupon from "./Coupon"
+import Product, { ProductType } from "./Product"
+import SubTotal from "./SubTotal"
 
-interface RightCardProps {
+const productData = [
+  {
+    img: "/assets/shoe3-1.png",
+    name: "Yin Yang Mandala",
+    description: "Women's Aqua Barefoot Shoes",
+    details: ["Black Sole", "US 9-10", "EU40-41"],
+    price: 35,
+    qnty: 1,
+    isFree: true,
+    key: generateKey("Yin Yang Mandala free"),
+  },
+  {
+    img: "/assets/shoe2-1.png",
+    name: "Yin Yang Mandala",
+    description: "Women's Aqua Barefoot Shoes",
+    details: ["Black Sole", "US 9-10", "EU40-41"],
+    price: 35,
+    qnty: 1,
+    isFree: false,
+    key: generateKey("Yin Yang Mandala"),
+  },
+  {
+    img: "/assets/shoe1-1.png",
+    name: "Watercolor Flowers",
+    description: "Women's Aqua Barefoot Shoes",
+    details: ["Black Sole", "US 9-10", "EU40-41"],
+    price: 35,
+    qnty: 2,
+    isFree: false,
+    key: generateKey("Watercolor Flowers"),
+  },
+  {
+    img: "/assets/GiftYWV1.png",
+    name: "Copy of Free Mystery Gift",
+    details: ["Free Gift", "Vibrant Vibes", "One Size"],
+    price: 0,
+    qnty: 1,
+    isFree: false,
+    key: generateKey("Copy of Free Mystery Gift"),
+  },
+  {
+    img: "/assets/SafeGuard2.png",
+    name: "Safeguard - Shipping Guarantee",
+    description: "Safeguard shipping guarantee",
+    details: [".98"],
+    price: 0.98,
+    qnty: 1,
+    isFree: false,
+    key: generateKey("Safeguard - Shipping Guarantee"),
+  },
+]
 
-}
+interface RightCardProps {}
 
 const RightCard: React.FC<RightCardProps> = ({}) => {
-        return (
-            <div className='right-card'>
-                <Advert />
-
-                <div>
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                    <Product />
-                </div>
-
-                <Coupon />
-
-                <SubTotal />
-            </div>
-        );
+  const [products, setProducts] = useState<ProductType[]>(productData)
+  console.log(products)
+  return (
+    <div className="right-card">
+      <Advert />
+      <div>
+        {products.map((product) => (
+          <Product key={product.key} data={product} />
+        ))}
+      </div>
+      <Coupon />
+      <SubTotal />
+    </div>
+  )
 }
-
 
 export default RightCard
