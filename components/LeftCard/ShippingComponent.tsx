@@ -35,9 +35,15 @@ const ShippingComponent: React.FC<ShippingComponentProps> = ({ setIsPayment }) =
         </div>
         <input className="input" type="tel" placeholder="Phone number (optional)" />
       </div>
-      <button className="submit-button" onClick={() => setIsPayment(true)}>
+      <div
+        role="button"
+        tabIndex={-5}
+        aria-hidden="true"
+        className="submit-button"
+        onClick={() => setIsPayment(true)}
+      >
         CONTINUE TO PAYMENT
-      </button>
+      </div>
     </div>
   )
 }

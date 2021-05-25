@@ -22,7 +22,7 @@ const Product: React.FC<ProductProps> = ({ data }) => {
   return (
     <div className="product">
       <div className="img-wrapper">
-        <Image src={img} height={83} width={157} />
+        <Image src={img} height={83} width={157} alt={name} />
         <div className="qnty">{qnty}</div>
       </div>
 

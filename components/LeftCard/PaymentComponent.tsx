@@ -57,9 +57,15 @@ const PaymentComponent: React.FC<PaymentComponentProps> = ({ setIsComplete }) =>
           </div>
         </div>
       </div>
-      <button className="submit-button" onClick={() => setIsComplete(true)}>
+      <div
+        role="button"
+        tabIndex={-4}
+        aria-hidden="true"
+        className="submit-button"
+        onClick={() => setIsComplete(true)}
+      >
         Complete order
-      </button>
+      </div>
     </div>
   )
 }

@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import generateKey from "../../helper/keyGen"
 import Advert from "./Advert"
 import Coupon from "./Coupon"
-import Product, { ProductType } from "./Product"
+import Product from "./Product"
 import SubTotal from "./SubTotal"
 
 const productData = [
@@ -57,16 +57,12 @@ const productData = [
   },
 ]
 
-interface RightCardProps {}
-
-const RightCard: React.FC<RightCardProps> = ({}) => {
-  const [products, setProducts] = useState<ProductType[]>(productData)
-  console.log(products)
+const RightCard = () => {
   return (
     <div className="right-card">
       <Advert />
       <div>
-        {products.map((product) => (
+        {productData.map((product) => (
           <Product key={product.key} data={product} />
         ))}
       </div>

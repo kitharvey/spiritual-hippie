@@ -1,22 +1,23 @@
 import React from "react"
 import { ImPriceTags } from "react-icons/im"
 import { VscChromeClose } from "react-icons/vsc"
-interface CouponProps {}
 
-const Coupon: React.FC<CouponProps> = ({}) => {
+const Coupon = () => {
   return (
     <div className="coupon-wrapper">
       <div className="input-wrapper">
         <input className="input" type="text" placeholder="Woohoo! Congrats!" />
-        <button>Apply</button>
+        <div role="button" tabIndex={-10} aria-hidden="true">
+          Apply
+        </div>
       </div>
 
       <div className="tag-wrapper">
         <ImPriceTags />
         <p>BOGO</p>
-        <button>
-            <VscChromeClose />
-        </button>
+        <div role="button" tabIndex={-7} aria-hidden="true">
+          <VscChromeClose />
+        </div>
       </div>
     </div>
   )
