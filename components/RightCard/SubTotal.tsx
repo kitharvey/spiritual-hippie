@@ -9,7 +9,7 @@ const SubTotal = () => {
           <p>Subtotal</p>
           <p>$105.98</p>
         </div>
-        <div className="flex-row">
+        <div className="flex-row discount">
           <p className="">
             <span>Discount&nbsp;&nbsp;</span>
             <span>

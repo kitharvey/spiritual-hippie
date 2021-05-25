@@ -15,7 +15,7 @@ const LeftCard = () => {
           role="button"
           tabIndex={0}
           aria-hidden="true"
-          className={isPayment ? "idle" : "active"}
+          className={`button ${isPayment ? "idle" : "active"}`}
           onClick={() => setIsPayment(false)}
         >
           <span>Shipping</span>
@@ -24,7 +24,7 @@ const LeftCard = () => {
           role="button"
           tabIndex={-1}
           aria-hidden="true"
-          className={isPayment ? "active" : "idle"}
+          className={`button ${isPayment ? "active" : "idle"}`}
           onClick={() => setIsPayment(true)}
         >
           <span>Payment</span>

@@ -3,18 +3,12 @@
 
 .left-card,
 .right-card {
-  width: 650px;
+  width: 100%;
   padding-top: 40px;
 }
 
 .main-page {
   display: flex;
+  justify-content: center;
   min-height: 95vh;
-
-  button {
-    appearance: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
 }

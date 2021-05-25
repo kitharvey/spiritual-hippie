@@ -7,7 +7,7 @@ const Coupon = () => {
     <div className="coupon-wrapper">
       <div className="input-wrapper">
         <input className="input" type="text" placeholder="Woohoo! Congrats!" />
-        <div role="button" tabIndex={-10} aria-hidden="true">
+        <div className='button' role="button" tabIndex={-10} aria-hidden="true">
           Apply
         </div>
       </div>
@@ -15,7 +15,7 @@ const Coupon = () => {
       <div className="tag-wrapper">
         <ImPriceTags />
         <p>BOGO</p>
-        <div role="button" tabIndex={-7} aria-hidden="true">
+        <div className='button' role="button" tabIndex={-7} aria-hidden="true">
           <VscChromeClose />
         </div>
       </div>
