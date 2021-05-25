@@ -18,7 +18,7 @@ const Advert = () => {
           </p>
         </div>
       </div>
-      <div className='button' role="button" tabIndex={-6} aria-hidden="true" onClick={() => {}}>
+      <div className="button" role="button" tabIndex={-6} aria-hidden="true" onClick={() => {}}>
         ADD TO MY ORDER
       </div>
     </div>
