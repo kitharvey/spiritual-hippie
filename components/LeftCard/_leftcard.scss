@@ -125,9 +125,13 @@
     }
   }
 
+  $primary-color: #9b9c9b;
+
   .header {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    position: relative;
 
     input[type="radio"] {
       cursor: pointer;
@@ -137,9 +141,38 @@
       border-radius: 50%;
       margin-right: 10px;
       border: 1px solid #717171;
+      position: absolute;
+      left: -9999px;
 
       &:checked {
         border: 3px solid #717171;
+      }
+
+      &:checked + span {
+        &:before {
+          box-shadow: inset 0 0 0 4px $primary-color;
+        }
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      padding: 0.375em 0.75em 0.375em 0.375em;
+      border-radius: 99em; // or something higher...
+      transition: 0.25s ease;
+
+      &:before {
+        display: flex;
+        flex-shrink: 0;
+        content: "";
+        background-color: #fff;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        margin-right: 0.375em;
+        transition: 0.25s ease;
+        box-shadow: inset 0 0 0 1px $primary-color;
       }
     }
   }

@@ -10,27 +10,27 @@ const PaymentComponent: React.FC<PaymentComponentProps> = ({ setIsComplete }) =>
     <div className="payment-wrapper">
       <div className="input-wrapper">
         <p className="title">Shipping method</p>
-        <div className="input header">
+        <label className="input header">
           <input type="radio" id="creditcard" value="creditcard" name="ship-method" />
-          <p>Secured Shipping</p>
-        </div>
+          <span>Secured Shipping</span>
+        </label>
       </div>
       <div className="input-wrapper">
         <p className="title">Billing address</p>
-        <div className="input header">
+        <label className="input header">
           <input type="radio" id="creditcard" value="creditcard" name="ship-add" />
-          <p>Same as shipping address</p>
-        </div>
-        <div className="input header">
+          <span>Same as shipping address</span>
+        </label>
+        <label className="input header">
           <input type="radio" id="creditcard" value="creditcard" name="ship-add" />
-          <p>Use a different billing address</p>
-        </div>
+          <span>Use a different billing address</span>
+        </label>
       </div>
       <div className="input-wrapper payment">
         <p className="title">Payment</p>
         <small>All transactions are secured and encrypted</small>
         <div className="creditcard-wrapper">
-          <div className="input header">
+          <label className="input header">
             <input
               className="input"
               type="radio"
@@ -38,8 +38,8 @@ const PaymentComponent: React.FC<PaymentComponentProps> = ({ setIsComplete }) =>
               value="creditcard"
               name="payment"
             />
-            <p>Credit Card</p>
-          </div>
+            <span>Credit Card</span>
+          </label>
           <div className="cc-input-wrapper">
             <input className="input" type="text" placeholder="Card number" />
             <input className="input" type="text" placeholder="Name on the card" />
@@ -51,10 +51,12 @@ const PaymentComponent: React.FC<PaymentComponentProps> = ({ setIsComplete }) =>
           </div>
         </div>
         <div>
-          <div className="input header">
+          <label className="input header">
             <input type="radio" id="paypal" value="paypal" name="payment" />
-            <Image src="/assets/paypal-icon.png" height={29} width={93} />
-          </div>
+            <span>
+              <Image src="/assets/paypal-icon.png" height={29} width={93} />
+            </span>
+          </label>
         </div>
       </div>
       <div
